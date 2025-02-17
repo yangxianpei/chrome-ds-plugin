@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        body {
+            width: 450px;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* 添加眼睛图标的样式 */
+        .eye-icon::before {
+            content: "👁";
+            font-size: 16px;
+        }
+
+        /* 添加一些额外的样式 */
+        .chat-button {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 20px;
+        }
+
+        /* 添加知乎热搜列表样式 */
+        .zhihu-hot {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eaecef;
+        }
+
+        .zhihu-hot h5 {
+            font-size: 1rem;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .hot-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hot-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .hot-item a {
+            color: #121212;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .hot-item a:hover {
+            color: #1a73e8;
+        }
+
+        .hot-index {
+            display: inline-block;
+            width: 20px;
+            margin-right: 8px;
+            color: #f26d5f;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-4" style="min-width: 400px;">
+        <h4 class="mb-4">DeepSeek 配置</h4>
+        <form id="configForm">
+            <!-- 聊天按钮会被 JS 插入到这里 -->
+
+            <div class="mb-3">
+                <label for="provider" class="form-label">服务提供商</label>
+                <select class="form-select" id="provider" required>
+                    <option value="">请选择服务商</option>
+                    <option value="deepseek">DeepSeek</option>
+                    <option value="siliconflow">硅基流动</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">模型</label>
+                <select class="form-select" id="model" disabled>
+                    <option value="">请先选择服务提供商</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">API Key</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="apiKey" placeholder="请输入 API Key">
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                        <span class="eye-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">保存配置</button>
+        </form>
+        <!-- 在掘金热搜后面添加 -->
+        <div class="weibo-hot">
+            <h5>微博热搜</h5>
+            <ul class="hot-list" id="weiboHotList">
+                <!-- 热搜列表将通过 JS 动态插入 -->
+            </ul>
+        </div>
+        <!-- 添加知乎热搜部分 -->
+        <div class="zhihu-hot">
+            <h5>知乎热搜</h5>
+            <ul class="hot-list" id="hotList">
+                <!-- 热搜列表将通过 JS 动态插入 -->
+            </ul>
+        </div>
+
+        <!-- 在知乎热搜后面添加 -->
+        <div class="juejin-hot">
+            <h5>掘金热门</h5>
+            <ul class="hot-list" id="juejinHotList">
+                <!-- 热搜列表将通过 JS 动态插入 -->
+            </ul>
+        </div>
+
+
+    </div>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

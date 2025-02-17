@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Chat",
+  "version": "1.0",
+  "description": "DeepSeek Chat Extension",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://api.deepseek.com/*",
+    "https://api.siliconflow.cn/*",
+    "https://www.zhihu.com/*",
+    "https://api.juejin.cn/*",
+    "https://weibo.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sidebar/sidebar.html",
+        "lib/marked.min.js",
+        "lib/highlight.min.js",
+        "lib/bootstrap.min.css",
+        "lib/bootstrap.bundle.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "images/deepseek.png",
+    "48": "images/deepseek.png",
+    "128": "images/deepseek.png"
+  }
+} 

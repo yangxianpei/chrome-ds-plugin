@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/highlight.min.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h5>DeepSeek 对话</h5>
+            <div class="header-buttons">
+                <button id="toggleFullscreen" class="btn btn-sm btn-outline-secondary">
+                    <span class="fullscreen-icon">⛶</span>
+                </button>
+                <button id="closeButton" class="btn btn-sm btn-outline-secondary ms-2">
+                    <span class="close-icon">×</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="chat-container" class="chat-container">
+            <div id="messages" class="messages"></div>
+        </div>
+
+        <div class="input-container">
+            <textarea id="userInput" class="form-control" rows="3" placeholder="输入您的问题..." autofocus></textarea>
+            <button id="sendButton" class="btn btn-primary">发送</button>
+        </div>
+    </div>
+
+    <script src="../lib/marked.min.js"></script>
+    <script src="../lib/highlight.min.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+body {
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.container {
+    padding: 15px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.alert {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+#configForm {
+    margin-bottom: 0;
+}
+
+/* 聊天按钮样式 */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-1px);
+}
+
+/* 分隔线样式 */
+.mb-3 {
+    position: relative;
+}
+
+.mb-3:after {
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* 掘金热搜样式 */
+.juejin-hot {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaecef;
+}
+
+.juejin-hot h5 {
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.hot-meta {
+    font-size: 12px;
+    color: #8a919f;
+    margin-top: 4px;
+}
+
+.hot-meta .author {
+    margin-right: 12px;
+}
+
+.hot-meta .view-count {
+    color: #8a919f;
+}
+
+/* 修改热搜项样式以适应两种数据源 */
+.hot-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.hot-item:hover {
+    background: #f8fafc;
+    padding-left: 8px;
+}
+
+.hot-item a {
+    color: #121212;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.hot-item:nth-child(1) .hot-index {
+    color: #1e80ff;  /* 掘金蓝 */
+}
+
+.hot-item:nth-child(2) .hot-index {
+    color: #1e80ff;
+    opacity: 0.8;
+}
+
+.hot-item:nth-child(3) .hot-index {
+    color: #1e80ff;
+    opacity: 0.6;
+}
+
+/* 微博热搜样式 */
+.weibo-hot {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaecef;
+}
+
+.weibo-hot h5 {
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.weibo-hot .hot-item:nth-child(1) .hot-index {
+    color: #ff3852;  /* 微博红 */
+}
+
+.weibo-hot .hot-item:nth-child(2) .hot-index {
+    color: #ff9406;  /* 微博橙 */
+}
+
+.weibo-hot .hot-item:nth-child(3) .hot-index {
+    color: #ffc300;  /* 微博黄 */
+}
+
+.hot-tag {
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: 6px;
+}
+
+.hot-tag.hot {
+    color: #ff9406;
+    background-color: #fff7e6;
+}
+
+.hot-tag.new {
+    color: #ff3852;
+    background-color: #fff0f0;
+} 
